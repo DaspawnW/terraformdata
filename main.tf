@@ -167,3 +167,9 @@ data "aws_ami" "base_ami" {
   owners      = ["self"]
   name_regex  = "dis-ami-base"
 }
+
+data "aws_ami" "base_ami_linux" {
+  most_recent = true
+  owners      = ["self"]
+  name_regex  = "dis-ami-aws-linux-base"
+}

@@ -39,6 +39,10 @@ output "base_ami_id" {
   value = "${data.aws_ami.base_ami.id}"
 }
 
+output "base_ami_linux_id" {
+  value = "${data.aws_ami.base_ami_linux.id}"
+}
+
 ##### CIDR outputs #####
 output "web_eu_central_1a_cidr" {
   value = "${data.aws_subnet.web_eu_central_1a.cidr_block}"
@@ -54,6 +58,14 @@ output "app_eu_central_1a_cidr" {
 
 output "app_eu_central_1b_cidr" {
   value = "${data.aws_subnet.app_eu_central_1b.cidr_block}"
+}
+
+output "db_eu_central_1a_cidr" {
+  value = "${data.aws_subnet.db_eu_central_1a.cidr_block}"
+}
+
+output "db_eu_central_1b_cidr" {
+  value = "${data.aws_subnet.db_eu_central_1b.cidr_block}"
 }
 
 output "elb_eu_central_1b_cidr" {
